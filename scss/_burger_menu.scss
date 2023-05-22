@@ -1,0 +1,103 @@
+.burger_container {
+    display: none;
+}
+@media (max-width: 320px) {
+    .burger_container {
+        display: block;
+    }
+}
+.burger {
+    display: block;
+    position: relative;
+    width: 23px;
+    height: 22px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.burger_line {
+    display: block;
+    background-color: #81B3D2;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: scale(1) translateY(-50%);
+    transition: 0.3s ease;
+}
+
+.burger_container._active .burger_line {
+    transform: scale(0);
+}
+
+.burger_container._active .burger::before {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    background-color: white;
+}
+.burger_container._active .burger::after {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: white;
+}
+.burger::before,
+.burger::after {
+    content: '';
+    display: block;
+    background-color: #81B3D2;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    transition: 0.3s ease;
+} 
+.burger::before {
+    top: 0;
+}
+.burger::after {
+    bottom: 0;
+}
+
+
+//Burger_menu
+.burger_menu_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.burger_menu {
+    width: 100%;
+    list-style: none;
+    @include flex-column;
+    padding: 0;
+    margin: 0;
+}
+.burger_menu_item {
+    width: 100%;
+    height: 55px;
+    a {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        @include flex-centr;
+        @include big-text-mobile;
+        color: rgb(255, 255, 255);
+        background-color: $description-color;
+        box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), 
+        inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+        transition: 0.3s ease;
+    }
+    a:hover {
+        background: #669EC0;
+    }
+    a:active {
+        background: #5496BD;
+        color: rgb(255, 255, 255, 0.3);
+    }
+}

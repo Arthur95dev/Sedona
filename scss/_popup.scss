@@ -1,0 +1,41 @@
+.popup_container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include flex-centr;
+    background: transparent;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+.popup {
+    width: 400px;
+    height: 347px;
+    @include flex-column;
+    justify-content: center;
+    color: black;
+    background: white;
+    box-shadow: 0 0 10px 0 rgb(122, 98, 98);
+    h2 {
+        @include big-text-desktop;
+        text-align: center;
+        width: 272px;
+    }
+    p {
+        @include regular-text;
+        text-align: center;
+        width: 272px;
+    }
+    .button {
+        width: 272px;
+        height: 58px;
+    }
+}
+
+.popup_active {
+    visibility: visible;
+    opacity: 1;
+}

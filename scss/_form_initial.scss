@@ -1,0 +1,44 @@
+.initial_block_container {
+    height: 292px;
+    width: 50%;
+    box-sizing: border-box;
+    border-left: 1px solid #DBDBDB;
+    padding-left: 80px;
+}
+
+.initial_block {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    height: 100%;
+    max-width: 400px;
+    h2 {
+        @include big-text-desktop;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 55px;
+    }
+    .form_name,
+    .form_surname,
+    .form_father-name {
+        width: 100%;
+        @include flex-between;
+        input {
+            width: 100%;
+        }
+    }
+    .form_name input:invalid:focus,
+    .form_surname input:invalid:focus,
+    .form_father-name input:invalid:focus {
+        border: 1px solid red;
+    }
+}
+
+@media (max-width:768px) {
+    .form_container {
+        max-width: 648px;
+    }
+    .initial_block_container {
+        padding-left: 60px;
+    }
+}

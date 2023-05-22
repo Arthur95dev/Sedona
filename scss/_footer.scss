@@ -1,0 +1,74 @@
+.footer {
+    width: 100%;
+    height: 120px;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+        @include big-text-desktop;
+    }
+    aside {
+        display: flex;
+        width: 150px;
+        justify-content: space-between;
+        a {
+            @include flex-centr;
+            text-decoration: none;
+            color: white;
+            font-size: 17px;
+            width: 46px;
+            height: 48px;
+            transition: 0.3s ease;
+            background-color: $description-color;
+        }
+        a:hover {
+            background: #669EC0;
+            box-shadow: inset 0 0 0 2px $description-color;
+        }
+        a:active {
+            background: #5496BD;
+        }
+        a:active .fa-brands {
+            opacity: 0.3;
+        }
+    }
+    .html_acad {
+        text-decoration: none;
+        @include regular-text;
+        color: black;
+        display: flex;
+        align-items: center;
+        .html_icon {
+            fill: black;
+            stroke: black;
+            margin-left: 10px;
+            transition: 0.3s ease;
+        }
+        .html_icon:hover {
+            fill: #81B3D2;
+            stroke: #81B3D2;
+        }
+        .html_icon:active {
+            opacity: 0.3;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    .footer {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 240px;
+        .html_acad {
+            margin-top: 15px;
+        }
+    }
+    
+}

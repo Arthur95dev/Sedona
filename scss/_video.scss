@@ -1,0 +1,202 @@
+.video_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    .video_description {
+        width: 445px;
+        height: 120px;
+        margin: 65px auto;
+        h2 {
+            text-align: center;
+        }
+    }
+    .video {
+        width: 800px;
+        height: 500px;
+        position: relative;
+        .video_item {
+            height: 100%;
+            width: 100%;
+        }
+        .controls {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 93px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            padding: 0 35px;
+            .controls_replay {
+                svg {
+                    display: block;
+                    fill: white;
+                    transition: 0.3s ease;
+                }
+            }
+            .controls_replay svg:hover  {
+                fill: rgba(255, 255, 255, 0.6);
+            }
+            .controls_replay svg:active  {
+                fill: rgba(255, 255, 255, 0.3);
+            }
+            .controls_fullscreen {
+                margin-left: auto;
+                svg {
+                    display: block;
+                    fill: white;
+                    transition: 0.3s ease;
+                }
+            }
+            .controls_fullscreen svg:hover  {
+                fill: rgba(255, 255, 255, 0.6);
+            }
+            .controls_fullscreen svg:active  {
+                fill: rgba(255, 255, 255, 0.3);
+            }
+            .controls_progress {
+                margin-left: 40px;
+                position: relative;
+                width: 540px;
+                .slider-track {
+                    width: 100%;
+                    height: 3px;
+                    background: rgba(255, 255, 255, 0.2)
+                }
+                input[type='range'] {
+                    appearance: none;   /*Internet Explorer*/ /*Отключение стандартного отображения используя стили системы*/
+                    -webkit-appearance: none; /*Safari Chrome Opera*/ /*Отключение стандартного отображения используя стили системы*/
+                    -moz-appearance: none; /*Mozilla Firefox*/ /*Отключение стандартного отображения используя стили системы*/
+                    width: 100%;
+                    height: 3px;
+                    background-color: transparent;
+                    pointer-events: none;
+                    outline: none;
+                    margin: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                input[type='range']::-webkit-slider-runnable-track {
+                    -webkit-appearance: none; /*Отключение стандартного отображения используя стили системы*/
+                    height: 3px;
+                }
+                input[type='range']::-moz-range-track {
+                    -moz-appearance: none; /*Отключение стандартного отображения используя стили системы*/
+                    height: 3px;
+                }
+                input[type='range']::-ms-track {
+                    appearance: none; /*Отключение стандартного отображения используя стили системы*/
+                    height: 3px;
+                } 
+                input[type='range']::-webkit-slider-thumb {
+                    -webkit-appearance: none; /*Отключение стандартного отображения используя стили системы*/                   width: 13px;
+                    height: 13px;
+                    border-radius: 50%;
+                    background-color:rgba(255, 255, 255, 1);
+                    pointer-events: auto;
+                    cursor: pointer;
+                    border: none;
+                }
+                input[type='range']::-moz-range-thumb {
+                    -moz-appearance: none; /*Отключение стандартного отображения используя стили системы*/
+                    width: 13px;
+                    height: 13px;
+                    border-radius: 50%;
+                    background-color:rgba(255, 255, 255, 1);
+                    pointer-events: auto;
+                    cursor: pointer;
+                    border: none;
+
+                }
+                input[type='range']::-ms-thumb{
+                    appearance: none; /*Отключение стандартного отображения используя стили системы*/
+                    width: 13px;
+                    height: 13px;
+                    border-radius: 50%;
+                    background-color:rgba(255, 255, 255, 1);
+                    pointer-events: auto;
+                    cursor: pointer;
+                    border: none;
+                }
+            }
+            .controls_subtitles {
+                margin-left: 40px;
+                svg {
+                    display: block;
+                    fill: white;
+                    transition: 0.3s ease;
+                }
+            }
+            .controls_subtitles svg:hover  {
+                fill: rgba(255, 255, 255, 0.6);
+            }
+            .controls_subtitles svg:active  {
+                fill: rgba(255, 255, 255, 0.3);
+            }
+        }
+    } 
+}
+
+@media (max-width: 768px) {
+    .video_container {
+        .video {
+            .controls {
+                bottom: 46.5px;
+                .controls_progress {
+                    width: 390px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .video_container {
+        margin-top: 95px;
+        .video {
+            height: 200px;
+            .controls {
+                height: 110px;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 45px,
+                rgba(242, 242, 242, 1) 45px);
+                display: flex;
+                flex-wrap: wrap;
+                bottom: -45px;
+                width: 100%;
+
+                .controls_replay,
+                .controls_fullscreen,
+                .controls_subtitles {
+                    svg {
+                        fill: rgba(92, 104, 112, 1);
+                    }
+                    svg:hover {
+                        fill: rgba(51, 51, 51, 1);
+                    }
+                    svg:active {
+                        fill: rgba(51, 51, 51, 0.3);
+                    }
+                }
+                .controls_replay {
+                    order: 2;
+                }
+                .controls_progress {
+                    width: 235px;
+                    margin: 0;
+                    margin-top: 22px;
+                    align-self: flex-start;
+                }
+                .controls_subtitles {
+                    margin-left: 125px;
+                    order: 3;
+                }
+                .controls_fullscreen {
+                    order: 4;
+                }
+            }
+        }
+    }
+}

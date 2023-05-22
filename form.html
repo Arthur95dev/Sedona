@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+			rel="stylesheet" />
+		<script
+			src="https://kit.fontawesome.com/24ea36863a.js"
+			crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="icon.svg" type="image/svg+xml" />
+		<title>Седона</title>
+	</head>
+	<body>
+		<header class="header">
+			<nav class="header_top_menu">
+				<ul class="nav_list">
+					<li class="nav_item">
+						<a href="index.html">Главная</a>
+					</li>
+					<li class="nav_item">
+						<a href="catalog.html">Фото и видео</a>
+					</li>
+					<li class="logo">
+						<img
+							src="img/logo-vector.svg"
+							alt="Фон логотипа"
+							class="logo_back" />
+						<img src="img/logo.svg" alt="Логотип" class="logo_icon" />
+					</li>
+					<li class="nav_item">
+						<a href="#">Форма отзыва</a>
+					</li>
+					<li class="nav_item">
+						<a href="https://htmlacademy.ru">html academy</a>
+					</li>
+					<li class="burger_container">
+						<button class="burger">
+							<span class="burger_line"></span>
+						</button>
+					</li>
+				</ul>
+			</nav>
+			<div class="header_body">
+				<div class="header_body_content">
+					<img src="img/header-back-text.svg" alt="Заголовок-картинка" />
+				</div>
+				<img
+					src="img/intro-header.svg"
+					alt="Декоративный элемент"
+					class="intro" />
+			</div>
+		</header>
+		<div class="form_container">
+			<main class="form_main">
+				<div class="main_description_container">
+					<div class="main_description">
+						<h1>Оставьте свой отзыв</h1>
+						<p>
+							Помогите нашим отелям стать лучше! оставьте отзыв о них, <br />
+							а также о посещенных вами достопримечательностях
+						</p>
+					</div>
+				</div>
+				<form method="post" class="form" action="">
+					<div class="impression_block_container">
+						<div class="impression_block form_block">
+							<h2>Ваше общее впечатление:</h2>
+							<label for="good" class="custom-radio">
+								<input type="radio" name="impression-item" id="good" checked />
+								<span>Скорее положительное</span>
+							</label>
+							<label for="bad" class="custom-radio">
+								<input type="radio" name="impression-item" id="bad" />
+								<span>Скорее отрицательное</span>
+							</label>
+							<label for="no-comment" class="custom-radio">
+								<input type="radio" name="impression-item" id="no-comment" />
+								<span>Затрудняюсь ответить</span>
+							</label>
+						</div>
+					</div>
+					<div class="initial_block_container">
+						<div class="initial_block form_block">
+							<h2>Представьтесь:</h2>
+							<div class="form_name">
+								<label for="name">Имя*:</label>
+								<input
+									type="text"
+									name="name"
+									id="name"
+									required
+									placeholder="Петр" />
+							</div>
+							<div class="form_surname">
+								<label for="surname">Фамилия*:</label>
+								<input
+									type="text"
+									name="surname"
+									id="surname"
+									required
+									placeholder="Иванов" />
+							</div>
+							<div class="form_father-name">
+								<label for="father_name">Отчество:</label>
+								<input
+									type="text"
+									name="father_name"
+									id="father_name"
+									required
+									placeholder="Александрович" />
+							</div>
+						</div>
+					</div>
+					<div class="contact_info_container form_block">
+						<fieldset>
+							<legend class="form_block_title">Контактная информация:</legend>
+							<div class="tel">
+								<label for="tel">Телефон*:</label>
+								<div class="input_container">
+									<input
+										type="tel"
+										name="tel"
+										id="tel"
+										required
+										placeholder="Введите телефон"
+										pattern="[1-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" />
+									<a href="tel:+"
+										><img src="img/phone.svg" alt="tel-icon"
+									/></a>
+								</div>
+							</div>
+							<div class="mail">
+								<label for="mail">Электронная почта*:</label>
+								<div class="input_container">
+									<input
+										type="email"
+										name="mail"
+										id="mail"
+										required
+										placeholder="Введите e-mail" />
+									<a href="mailto:"
+										><img src="img/mail.svg" alt="mail-icon"
+									/></a>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<div class="attraction_container form_block">
+						<fieldset>
+							<legend class="form_block_title">
+								Посещенные <br />
+								достопримечательности:
+							</legend>
+							<label for="bridge" class="custom-checkbox">
+								<input type="checkbox" name="bridge" id="bridge" checked />
+								<span>Мост дьявола</span>
+							</label>
+							<label for="mountain" class="custom-checkbox">
+								<input type="checkbox" name="mountain" id="mountain" />
+								<span>Гора-колокол</span>
+							</label>
+							<label for="slide_park" class="custom-checkbox">
+								<input
+									type="checkbox"
+									name="slide_park"
+									id="slide_park"
+									checked />
+								<span>Слайд-парк</span>
+							</label>
+							<label for="red_rocks" class="custom-checkbox">
+								<input type="checkbox" name="red_rocks" id="red_rocks" />
+								<span>Красные скалы</span>
+							</label>
+						</fieldset>
+					</div>
+					<div class="feedback_container form_block">
+						<fieldset>
+							<legend class="form_block_title">Опишите свои эмоции:</legend>
+							<div class="feedback_item_container">
+								<textarea
+									class="feedback"
+									name="feedback"
+									id="feedback"
+									maxlength="300"
+									cols="30"
+									rows="10"
+									placeholder="Опишите подробно все свои восторги"
+									required></textarea>
+								<span class="feedback_count"></span>
+							</div>
+						</fieldset>
+					</div>
+					<div class="button_container">
+						<button type="submit" class="button button-form">
+							Отправить отзыв
+						</button>
+						<span>* — обязательные поля</span>
+					</div>
+				</form>
+			</main>
+			<footer class="footer">
+				<p>#visitSEDONA</p>
+				<aside>
+					<a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+					<a href="https://facebook.com"
+						><i class="fa-brands fa-facebook-f"></i
+					></a>
+					<a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+				</aside>
+				<a href="https://htmlacademy.ru" class="html_acad">
+					Разработано
+					<svg class="html_icon" width="27" height="35" viewBox="0 0 27 35">
+						<path
+							d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" />
+					</svg>
+				</a>
+			</footer>
+		</div>
+		<div class="popup_container success">
+			<div class="popup">
+				<h2>Ваш отзыв отправлен!</h2>
+				<p>
+					Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее
+					время мы опубликуем его на сайте.
+				</p>
+				<a href="#" class="button button-success"><span>Закрыть окно</span></a>
+			</div>
+		</div>
+		<div class="popup_container failure">
+			<div class="popup">
+				<h2>ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
+				<p>
+					Проверьте поля, выделенные красным, скорее всего вы забыли их
+					заполнить
+				</p>
+				<a href="#" class="button button-fail"><span>ОК</span></a>
+			</div>
+		</div>
+		<script src="script.js"></script>
+		<script src="js/_popup.js"></script>
+	</body>
+</html>
