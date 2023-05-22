@@ -1,0 +1,2 @@
+# Sedona
+Responsive, cross-browser
